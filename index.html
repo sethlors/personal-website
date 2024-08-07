@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vCard - Personal Portfolio</title>
+
+    <!--
+      - favicon
+    -->
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+    <!--
+      - custom css link
+    -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!--
+  - #MAIN
+-->
+
+<main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+        <div class="sidebar-info">
+
+            <figure class="avatar-box">
+                <img src="./assets/images/seth-headshot.png" alt="Seth Lors" width="80">
+            </figure>
+
+            <div class="info-content">
+                <h1 class="name" title="Richard hanrick">Seth Lors</h1>
+
+                <p class="title">Data Science Major</p>
+                <br>
+                <p class="title">PTS Cloud Software Engineer</p>
+            </div>
+
+            <button class="info_more-btn" data-sidebar-btn>
+                <span>Show Contacts</span>
+
+                <ion-icon name="chevron-down"></ion-icon>
+            </button>
+
+        </div>
+
+        <div class="sidebar-info_more">
+
+            <div class="separator"></div>
+
+            <ul class="contacts-list">
+
+                <li class="contact-item">
+
+                    <div class="icon-box">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Email</p>
+
+                        <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+                    </div>
+
+                </li>
+
+                <li class="contact-item">
+
+                    <div class="icon-box">
+                        <ion-icon name="phone-portrait-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Phone</p>
+
+                        <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+                    </div>
+
+                </li>
+
+                <li class="contact-item">
+
+                    <div class="icon-box">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Birthday</p>
+
+                        <time datetime="1982-06-23">June 23, 1982</time>
+                    </div>
+
+                </li>
+
+                <li class="contact-item">
+
+                    <div class="icon-box">
+                        <ion-icon name="location-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Location</p>
+
+                        <address>Sacramento, California, USA</address>
+                    </div>
+
+                </li>
+
+            </ul>
+
+            <div class="separator"></div>
+
+            <ul class="social-list">
+
+                <li class="social-item">
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="social-item">
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="social-item">
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </aside>
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+        <!--
+          - #NAVBAR
+        -->
+
+        <nav class="navbar">
+
+            <ul class="navbar-list">
+
+                <li class="navbar-item">
+                    <button class="navbar-link  active" data-nav-link>About</button>
+                </li>
+
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>Resume</button>
+                </li>
+
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>Portfolio</button>
+                </li>
+            </ul>
+
+        </nav>
+
+
+        <!--
+          - #ABOUT
+        -->
+
+        <article class="about  active" data-page="about">
+
+            <header>
+                <h2 class="h2 article-title">About me</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    I am a Senior at Iowa State University majoring in Data Science. I work as a Part Time Cloud
+                    Software Engineer at John Deere where I work with a team of engineers to develop and manage
+                    cloud-based solutions for all of John Deere.
+                </p>
+            </section>
+
+
+            <!--
+              - service
+            -->
+
+            <section class="service">
+
+                <h3 class="h3 service-title">What i'm doing</h3>
+
+                <ul class="service-list">
+
+                    <li class="service-item">
+
+                        <div class="service-icon-box">
+                            <img src="./assets/images/cloud-outline.svg" alt="cloud icon" width="40">
+                        </div>
+
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title">AWS</h4>
+
+                            <p class="service-item-text">
+                                Gaining real world experience with common AWS services such as Route53, EC2, S3, and
+                                Lambda.
+                            </p>
+                        </div>
+
+                    </li>
+
+                    <li class="service-item">
+
+                        <div class="service-icon-box">
+                            <img src="./assets/images/git-compare-outline.svg" alt="git compare icon" width="40">
+                        </div>
+
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title">CI/CD Management</h4>
+
+                            <p class="service-item-text">
+                                Using GitHub Actions to implement CI/CD pipelines into projects to enhance development
+                                efficiency.
+                            </p>
+                        </div>
+
+                    </li>
+
+                    <li class="service-item">
+
+                        <div class="service-icon-box">
+                            <img src="./assets/images/stats-chart-outline.svg" alt="stats chart icon" width="40">
+                        </div>
+
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title">Machine Learning</h4>
+
+                            <p class="service-item-text">
+                                Using foundational skills in machine learning and data science to analyze and predict
+                                factory usage.
+                            </p>
+                        </div>
+
+                    </li>
+
+                    <li class="service-item">
+
+                        <div class="service-icon-box">
+                            <img src="./assets/images/globe-outline.svg" alt="globe icon" width="40">
+                        </div>
+
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title">Innovating</h4>
+
+                            <p class="service-item-text">
+                                Constantly learning new technologies and implementing them into projects to stay ahead
+                                of the curve.
+                            </p>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!--
+              - hobbies
+            -->
+
+            <!-- Modal Container -->
+            <div class="modal-container" data-modal-container>
+                <div class="hobbies-modal">
+                    <div class="modal-img-wrapper">
+                        <img src="" alt="" data-modal-img>
+                        <p class="modal-link">
+                            <a href="" target="_blank" data-modal-link>Check out my work here</a>
+                        </p>
+                    </div>
+                    <div class="modal-text-wrapper">
+                        <h4 data-modal-title></h4>
+                        <div data-modal-text></div>
+                    </div>
+                </div>
+                <div class="overlay" data-overlay></div>
+            </div>
+
+            <section class="hobbies">
+
+                <h3 class="h3 hobbies-title">Hobbies</h3>
+
+                <ul class="hobbies-list has-scrollbar">
+
+                    <li class="hobbies-item" data-hobbies-link="https://www.photography-example.com">
+                        <div class="content-card" data-hobbies-item>
+                            <figure class="hobbies-avatar-box">
+                                <img src="./assets/images/camera-outline.svg" alt="camera icon" width="60" data-hobbies-avatar>
+                            </figure>
+                            <h4 class="h4 hobbies-item-title" data-hobbies-title>Photography</h4>
+                            <div class="hobbies-text" data-hobbies-text>
+                                <p>I'm no professional, but I love taking photos and flying drones in my free time!</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="hobbies-item" data-hobbies-link="https://www.table-tennis-example.com">
+                        <div class="content-card" data-hobbies-item>
+                            <figure class="hobbies-avatar-box">
+                                <img src="./assets/images/table-tennis-outline.svg" alt="table tennis icon" width="60" data-hobbies-avatar>
+                            </figure>
+                            <h4 class="h4 hobbies-item-title" data-hobbies-title>Table Tennis</h4>
+                            <div class="hobbies-text" data-hobbies-text>
+                                <p>I used to play on the ISU Table Tennis team, but now I just love playing casually!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hobbies-item">
+                        <div class="content-card" data-hobbies-item>
+
+                            <figure class="hobbies-avatar-box">
+                                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60"
+                                     data-hobbies-avatar>
+                            </figure>
+
+                            <h4 class="h4 hobbies-item-title" data-hobbies-title>Daniel lewis</h4>
+
+                            <div class="hobbies-text" data-hobbies-text>
+                                <p>
+                                    Richard was hired to create a corporate identity. We were very pleased with the work
+                                    done. She has a
+                                    lot of experience
+                                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet,
+                                    ullamcous cididt
+                                    consectetur adipiscing
+                                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="hobbies-item">
+                        <div class="content-card" data-hobbies-item>
+
+                            <figure class="hobbies-avatar-box">
+                                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60"
+                                     data-hobbies-avatar>
+                            </figure>
+
+                            <h4 class="h4 hobbies-item-title" data-hobbies-title>Daniel lewis</h4>
+
+                            <div class="hobbies-text" data-hobbies-text>
+                                <p>
+                                    Richard was hired to create a corporate identity. We were very pleased with the work
+                                    done. She has a
+                                    lot of experience
+                                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet,
+                                    ullamcous cididt
+                                    consectetur adipiscing
+                                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!--
+              - hobbies modal
+            -->
+
+            <div class="modal-container" data-modal-container>
+
+                <div class="overlay" data-overlay></div>
+
+                <section class="hobbies-modal">
+
+                    <button class="modal-close-btn" data-modal-close-btn>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                    <div class="modal-img-wrapper">
+                        <figure class="modal-avatar-box">
+                            <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+                        </figure>
+                    </div>
+
+                    <div class="modal-content">
+
+                        <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+                        <time datetime="2021-06-14">14 June, 2021</time>
+
+                        <div data-modal-text>
+                            <p>
+                                Richard was hired to create a corporate identity. We were very pleased with the work
+                                done. She has a
+                                lot of experience
+                                and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous
+                                cididt
+                                consectetur adipiscing
+                                elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </article>
+
+
+        <!--
+          - #RESUME
+        -->
+
+        <article class="resume" data-page="resume">
+
+            <header>
+                <h2 class="h2 article-title">Resume</h2>
+            </header>
+
+            <section class="timeline">
+
+                <div class="title-wrapper">
+                    <div class="icon-box">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </div>
+
+                    <h3 class="h3">Education</h3>
+                </div>
+
+                <ol class="timeline-list">
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">University school of the arts</h4>
+
+                        <span>2007 — 2008</span>
+
+                        <p class="timeline-text">
+                            Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos
+                            dolores et
+                            quas molestias
+                            exceptur.
+                        </p>
+
+                    </li>
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">New york academy of art</h4>
+
+                        <span>2006 — 2007</span>
+
+                        <p class="timeline-text">
+                            Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas
+                            assumenda est
+                            omnis..
+                        </p>
+
+                    </li>
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">High school of art and design</h4>
+
+                        <span>2002 — 2004</span>
+
+                        <p class="timeline-text">
+                            Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed
+                            consequuntur
+                            magni dolores
+                            eos.
+                        </p>
+
+                    </li>
+
+                </ol>
+
+            </section>
+
+            <section class="timeline">
+
+                <div class="title-wrapper">
+                    <div class="icon-box">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </div>
+
+                    <h3 class="h3">Experience</h3>
+                </div>
+
+                <ol class="timeline-list">
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">Creative director</h4>
+
+                        <span>2015 — Present</span>
+
+                        <p class="timeline-text">
+                            Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos
+                            dolores et qvuas
+                            molestias
+                            exceptur.
+                        </p>
+
+                    </li>
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">Art director</h4>
+
+                        <span>2013 — 2015</span>
+
+                        <p class="timeline-text">
+                            Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos
+                            dolores et
+                            quas molestias
+                            exceptur.
+                        </p>
+
+                    </li>
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">Web designer</h4>
+
+                        <span>2010 — 2013</span>
+
+                        <p class="timeline-text">
+                            Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos
+                            dolores et
+                            quas molestias
+                            exceptur.
+                        </p>
+
+                    </li>
+
+                </ol>
+
+            </section>
+
+            <section class="skill">
+
+                <h3 class="h3 skills-title">My skills</h3>
+
+                <ul class="skills-list content-card">
+
+                    <li class="skills-item">
+
+                        <div class="title-wrapper">
+                            <h5 class="h5">Web design</h5>
+                            <data value="80">80%</data>
+                        </div>
+
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 80%;"></div>
+                        </div>
+
+                    </li>
+
+                    <li class="skills-item">
+
+                        <div class="title-wrapper">
+                            <h5 class="h5">Graphic design</h5>
+                            <data value="70">70%</data>
+                        </div>
+
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 70%;"></div>
+                        </div>
+
+                    </li>
+
+                    <li class="skills-item">
+
+                        <div class="title-wrapper">
+                            <h5 class="h5">Branding</h5>
+                            <data value="90">90%</data>
+                        </div>
+
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 90%;"></div>
+                        </div>
+
+                    </li>
+
+                    <li class="skills-item">
+
+                        <div class="title-wrapper">
+                            <h5 class="h5">WordPress</h5>
+                            <data value="50">50%</data>
+                        </div>
+
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 50%;"></div>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </article>
+
+
+        <!--
+          - #PORTFOLIO
+        -->
+
+        <article class="portfolio" data-page="portfolio">
+
+            <header>
+                <h2 class="h2 article-title">Portfolio</h2>
+            </header>
+
+            <section class="projects">
+
+                <ul class="filter-list">
+
+                    <li class="filter-item">
+                        <button class="active" data-filter-btn>All</button>
+                    </li>
+
+                    <li class="filter-item">
+                        <button data-filter-btn>Web design</button>
+                    </li>
+
+                    <li class="filter-item">
+                        <button data-filter-btn>Applications</button>
+                    </li>
+
+                    <li class="filter-item">
+                        <button data-filter-btn>Web development</button>
+                    </li>
+
+                </ul>
+
+                <div class="filter-select-box">
+
+                    <button class="filter-select" data-select>
+
+                        <div class="select-value" data-selecct-value>Select category</div>
+
+                        <div class="select-icon">
+                            <ion-icon name="chevron-down"></ion-icon>
+                        </div>
+
+                    </button>
+
+                    <ul class="select-list">
+
+                        <li class="select-item">
+                            <button data-select-item>All</button>
+                        </li>
+
+                        <li class="select-item">
+                            <button data-select-item>Web design</button>
+                        </li>
+
+                        <li class="select-item">
+                            <button data-select-item>Applications</button>
+                        </li>
+
+                        <li class="select-item">
+                            <button data-select-item>Web development</button>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <ul class="project-list">
+
+                    <li class="project-item  active" data-filter-item data-category="web development">
+                        <a href="#">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Finance</h3>
+
+                            <p class="project-category">Web development</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="web development">
+                        <a href="#">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Orizon</h3>
+
+                            <p class="project-category">Web development</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="web design">
+                        <a href="#">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Fundo</h3>
+
+                            <p class="project-category">Web design</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="applications">
+                        <a href="#">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Brawlhalla</h3>
+
+                            <p class="project-category">Applications</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="web design">
+                        <a href="#">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">DSM.</h3>
+
+                            <p class="project-category">Web design</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="web design">
+                        <a href="#">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">MetaSpark</h3>
+
+                            <p class="project-category">Web design</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="web development">
+                        <a href="#">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Summary</h3>
+
+                            <p class="project-category">Web development</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="applications">
+                        <a href="#">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Task Manager</h3>
+
+                            <p class="project-category">Applications</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="web development">
+                        <a href="#">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Arrival</h3>
+
+                            <p class="project-category">Web development</p>
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </article>
+
+    </div>
+
+</main>
+
+
+<!--
+  - custom js link
+-->
+<script src="./assets/js/script.js"></script>
+
+<!--
+  - ionicon link
+-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
