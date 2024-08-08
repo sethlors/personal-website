@@ -589,7 +589,7 @@ main {
 .service-item-text {
     color: var(--light-gray);
     font-size: var(--fs-6);
-    font-weight: var(--fw-3);
+    font-weight: var(--fs-3);
     line-height: 1.6;
 }
 
@@ -597,7 +597,6 @@ main {
 /**
  * #hobbies
  */
-
 .hobbies {
     margin-bottom: 30px;
 }
@@ -636,7 +635,11 @@ main {
 }
 
 .hobbies-item-title {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
+    text-align: center; /* Center text */
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content; /* Center horizontally */
 }
 
 .hobbies-text {
@@ -651,11 +654,9 @@ main {
     overflow: hidden;
 }
 
-
 /**
  * #hobbies-modal
  */
-
 .modal-container {
     position: fixed;
     top: 0;
@@ -702,13 +703,13 @@ main {
 }
 
 .hobbies-modal {
-    background: var(--eerie-black-2);
+    background: transparent; /* Make modal background transparent */
     position: relative;
-    padding: 15px;
+    padding: 0; /* Remove padding */
     margin: 15px 12px;
-    border: 1px solid var(--jet);
-    border-radius: 14px;
-    box-shadow: var(--shadow-5);
+    border: none; /* Remove border */
+    border-radius: 0; /* Remove border-radius */
+    box-shadow: none; /* Remove shadow */
     transform: scale(1.2);
     opacity: 0;
     transition: var(--transition-1);
@@ -720,98 +721,58 @@ main {
     opacity: 1;
 }
 
-.modal-close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: var(--onyx);
-    border-radius: 8px;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--white-2);
-    font-size: 18px;
-    opacity: 0.7;
-}
-
 .modal-close-btn:hover,
 .modal-close-btn:focus {
     opacity: 1;
 }
 
-.modal-close-btn ion-icon {
-    --ionicon-stroke-width: 50px;
-}
-
-.modal-avatar-box {
-    background: var(--bg-gradient-onyx);
-    width: max-content;
-    border-radius: 14px;
-    margin-bottom: 15px;
-    box-shadow: var(--shadow-2);
-}
-
-.modal-img-wrapper > img {
-    display: none;
-}
-
-.modal-title {
-    margin-bottom: 4px;
-}
-
-.modal-content time {
-    font-size: var(--fs-6);
-    color: var(--light-gray-70);
-    font-weight: var(--fw-300);
-    margin-bottom: 10px;
-}
-
-.modal-content p {
-    color: var(--light-gray);
-    font-size: var(--fs-6);
-    font-weight: var(--fw-300);
-    line-height: 1.6;
-}
-
-
-/**
- * #clients
- */
-
-.clients {
-    margin-bottom: 15px;
-}
-
-.clients-list {
+.modal-carousel {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 15px;
-    margin: 0 -15px;
-    padding: 25px;
-    padding-bottom: 25px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    overscroll-behavior-inline: contain;
-    scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 25px;
-}
-
-.clients-item {
-    min-width: 50%;
-    scroll-snap-align: start;
-}
-
-.clients-item img {
+    justify-content: center;
+    align-items: center;
+    position: relative;
     width: 100%;
-    filter: grayscale(1);
-    transition: var(--transition-1);
+    height: 80vh; /* Set a fixed height to maintain aspect ratio */
 }
 
-.clients-item img:hover {
-    filter: grayscale(0);
+.modal-carousel img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Maintain aspect ratio */
+    display: none; /* Hide all images by default */
+}
+
+.modal-carousel img.active {
+    display: block; /* Show the active image */
+}
+
+.modal-carousel img {
+    background: transparent;
+}
+
+.modal-close-btn {
+    z-index: 3;
+}
+
+.modal-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fdd971;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
 }
 
 
@@ -893,10 +854,12 @@ main {
 }
 
 
-/**
- * skills 
- */
+:root {
+    --jet: #333333; /* Define your colors here */
+    --light-gray: #d3d3d3;
+}
 
+/* skills */
 .skills-title {
     margin-bottom: 20px;
 }
@@ -904,7 +867,6 @@ main {
 .skills-list {
     padding: 20px;
 }
-
 
 .skills-item:not(:last-child) {
     margin-bottom: 15px;
@@ -928,18 +890,32 @@ main {
     width: 100%;
     height: 8px;
     border-radius: 10px;
+    overflow: hidden; /* Ensure the progress bar does not overflow its container */
 }
 
 .skill-progress-fill {
-    background: var(--text-gradient-yellow);
-    height: 100%;
-    border-radius: inherit;
+    background: #fdd971; /* Or any other color you prefer */
+    width: 0; /* Start with 0 width */
+    height: 8px; /* Set a fixed height */
+    transition: width 2s ease-out, background-color 2s ease; /* Animate width change and background color */
+}
+
+.skill-progress-fill.animate {
+    width: 75%; /* Set the width to the desired percentage */
+    background: #fdd971; /* Ensure this color is visible */
 }
 
 
 /*-----------------------------------*\
   #PORTFOLIO
 \*-----------------------------------*/
+
+
+.info-message {
+ margin-top: 8px; /* Adjust as needed */
+ color: #fdd971; /* Adjust color as needed */
+ font-size: 14px; /* Adjust font size as needed */
+}
 
 .filter-list {
     display: none;
@@ -1223,11 +1199,44 @@ main {
     }
 
     .avatar-box {
-        border-radius: 30px;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 50%;
     }
 
-    .avatar-box img {
-        width: 120px;
+    .avatar {
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .avatar-crazy {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1; /* Ensure it's above the normal avatar */
+        opacity: 0;
+        pointer-events: none; /* Prevents hover issues */
+    }
+
+    .avatar-box:hover .avatar-crazy {
+        opacity: 1;
+        animation: spin 2s infinite linear;
+    }
+
+    .avatar-box:hover .avatar-normal {
+        opacity: 0;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
     }
 
     .info-content .name {
@@ -1327,20 +1336,19 @@ main {
     .content-card {
         padding: 30px;
         padding-top: 25px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
     }
 
     .hobbies-avatar-box {
-        transform: translate(30px, -30px);
-        border-radius: 20px;
+        transform: none; /* Reset transform */
+        border-radius: 0; /* Reset border-radius */
+        display: inline-block; /* Ensure the box fits the content */
+        background: none; /* Remove background if any */
     }
 
     .hobbies-avatar-box img {
-        width: 80px;
-    }
-
-    .hobbies-item-title {
-        margin-bottom: 10px;
-        margin-left: 95px;
+        width: 45px; /* Adjust size as needed */
+        display: block; /* Ensure image is displayed correctly */
     }
 
     .hobbies-text {
@@ -1348,7 +1356,16 @@ main {
         -webkit-line-clamp: 2;
     }
 
-    /* hobbies modal */
+    .hobbies-item {
+        cursor: pointer; /* Change cursor to pointer to indicate clickability */
+    }
+
+    .hobbies-item:hover .content-card {
+        transform: translateY(-5px); /* Slightly lift the item */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow to make it pop */
+    }
+
+    /* Hobbies modal */
     .modal-container {
         padding: 20px;
     }
@@ -1383,26 +1400,68 @@ main {
         width: 35px;
     }
 
-    /* General card styles */
-    .content-card {
-        color: white; /* Set text color for the whole card */
-    }
-
-    /* Specific element styles in the card */
-    .content-card h4,
-    .content-card p {
-        color: white; /* Ensure these elements are white */
-    }
-
-    /* Modal styles */
     .modal-container {
-        color: white; /* Set text color for the entire modal */
+        display: none; /* Hide the modal by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
     }
 
-    .modal-link a {
-        color: #fdd971; /* Change link color to white in the modal */
+    .modal-container.active {
+        display: flex; /* Show the modal when active */
     }
 
+    .hobbies-modal {
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 80%;
+        max-height: 80%;
+        overflow-y: auto;
+    }
+
+    .modal-carousel {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-carousel img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .overlay {
+        display: none; /* Hide the overlay by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 999;
+    }
+
+    .overlay.active {
+        display: block; /* Show the overlay when active */
+    }
+
+    .modal-close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+    }
 
     /**
      * #RESUME
@@ -1421,14 +1480,43 @@ main {
         left: -43px;
     }
 
+    .timeline-text {
+        list-style-type: disc; /* Default bullet style */
+        padding-left: 20px; /* Indentation */
+    }
+
+    .timeline-text li {
+        margin-bottom: 10px; /* Space between bullet points */
+    }
+
     .skills-item:not(:last-child) {
         margin-bottom: 25px;
     }
 
+    .timeline-item {
+        margin-bottom: 20px; /* Space between timeline items */
+    }
+
+    .timeline-item-title {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .timeline-item span {
+        display: block;
+        margin-bottom: 5px;
+        color: white;
+    }
+
+    .employer {
+        font-style: italic;
+        color: #fdd971;
+        margin-top: 5px;
+    }
 
     /**
-     * #PORTFOLIO, BLOG
-     */
+   * #PORTFOLIO, BLOG
+   */
     .project-img, .blog-banner-box {
         border-radius: 16px;
     }
@@ -1441,36 +1529,6 @@ main {
         padding: 25px;
     }
 
-
-    /**
-     * #CONTACT
-     */
-    .mapbox {
-        height: 380px;
-        border-radius: 18px;
-    }
-
-    .input-wrapper {
-        gap: 30px;
-        margin-bottom: 30px;
-    }
-
-    .form-input {
-        padding: 15px 20px;
-    }
-
-    textarea.form-input {
-        margin-bottom: 30px;
-    }
-
-    .form-btn {
-        --fs-6: 16px;
-        padding: 16px 20px;
-    }
-
-    .form-btn ion-icon {
-        font-size: 18px;
-    }
 
 }
 
@@ -1563,18 +1621,6 @@ main {
         grid-template-columns: 1fr 1fr;
     }
 
-
-    /**
-     * CONTACT
-     */
-    .input-wrapper {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .form-btn {
-        width: max-content;
-        margin-left: auto;
-    }
 
 }
 

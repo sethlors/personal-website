@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vCard - Personal Portfolio</title>
+    <title>Seth Lors</title>
 
     <!--
       - favicon
     -->
-    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/pig.png" type="image/x-icon">
 
     <!--
       - custom css link
@@ -42,11 +42,13 @@
         <div class="sidebar-info">
 
             <figure class="avatar-box">
-                <img src="./assets/images/seth-headshot.png" alt="Seth Lors" width="80">
+                <img src="./assets/images/seth-headshot.png" alt="Seth Lors" width="80" class="avatar-normal">
+                <img src="./assets/images/seth-headshot-crazy.png" alt="Seth Lors Crazy Eyes" width="80"
+                     class="avatar-crazy">
             </figure>
 
             <div class="info-content">
-                <h1 class="name" title="Richard hanrick">Seth Lors</h1>
+                <h1 class="name" title="Seth Lors">Seth Lors</h1>
 
                 <p class="title">Data Science Major</p>
                 <br>
@@ -76,38 +78,11 @@
                     <div class="contact-info">
                         <p class="contact-title">Email</p>
 
-                        <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+                        <a href="mailto:refresh.02-rotors@icloud.com" class="contact-link">Click to email me!</a>
                     </div>
 
                 </li>
 
-                <li class="contact-item">
-
-                    <div class="icon-box">
-                        <ion-icon name="phone-portrait-outline"></ion-icon>
-                    </div>
-
-                    <div class="contact-info">
-                        <p class="contact-title">Phone</p>
-
-                        <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
-                    </div>
-
-                </li>
-
-                <li class="contact-item">
-
-                    <div class="icon-box">
-                        <ion-icon name="calendar-outline"></ion-icon>
-                    </div>
-
-                    <div class="contact-info">
-                        <p class="contact-title">Birthday</p>
-
-                        <time datetime="1982-06-23">June 23, 1982</time>
-                    </div>
-
-                </li>
 
                 <li class="contact-item">
 
@@ -118,7 +93,7 @@
                     <div class="contact-info">
                         <p class="contact-title">Location</p>
 
-                        <address>Sacramento, California, USA</address>
+                        <address>West Des Moines, IA, USA</address>
                     </div>
 
                 </li>
@@ -128,22 +103,9 @@
             <div class="separator"></div>
 
             <ul class="social-list">
-
                 <li class="social-item">
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                </li>
-
-                <li class="social-item">
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-twitter"></ion-icon>
-                    </a>
-                </li>
-
-                <li class="social-item">
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-instagram"></ion-icon>
+                    <a href="https://www.linkedin.com/in/seth-lors-5901381b8/" class="social-link" target="_blank">
+                        <ion-icon name="logo-linkedin"></ion-icon>
                     </a>
                 </li>
 
@@ -216,7 +178,7 @@
                     <li class="service-item">
 
                         <div class="service-icon-box">
-                            <img src="./assets/images/cloud-outline.svg" alt="cloud icon" width="40">
+                            <img src="./assets/images/icons/cloud-outline.svg" alt="cloud icon" width="40">
                         </div>
 
                         <div class="service-content-box">
@@ -233,7 +195,7 @@
                     <li class="service-item">
 
                         <div class="service-icon-box">
-                            <img src="./assets/images/git-compare-outline.svg" alt="git compare icon" width="40">
+                            <img src="./assets/images/icons/git-compare-outline.svg" alt="git compare icon" width="40">
                         </div>
 
                         <div class="service-content-box">
@@ -250,7 +212,7 @@
                     <li class="service-item">
 
                         <div class="service-icon-box">
-                            <img src="./assets/images/stats-chart-outline.svg" alt="stats chart icon" width="40">
+                            <img src="./assets/images/icons/stats-chart-outline.svg" alt="stats chart icon" width="40">
                         </div>
 
                         <div class="service-content-box">
@@ -267,7 +229,7 @@
                     <li class="service-item">
 
                         <div class="service-icon-box">
-                            <img src="./assets/images/globe-outline.svg" alt="globe icon" width="40">
+                            <img src="./assets/images/icons/globe-outline.svg" alt="globe icon" width="40">
                         </div>
 
                         <div class="service-content-box">
@@ -293,30 +255,23 @@
             <!-- Modal Container -->
             <div class="modal-container" data-modal-container>
                 <div class="hobbies-modal">
-                    <div class="modal-img-wrapper">
-                        <img src="" alt="" data-modal-img>
-                        <p class="modal-link">
-                            <a href="" target="_blank" data-modal-link>Check out my work here</a>
-                        </p>
-                    </div>
-                    <div class="modal-text-wrapper">
-                        <h4 data-modal-title></h4>
-                        <div data-modal-text></div>
-                    </div>
+                    <button class="modal-close-btn" data-modal-close-btn>&times;</button>
+                    <button class="modal-arrow left-arrow" data-left-arrow>&#9664;</button>
+                    <div class="modal-carousel" data-modal-carousel></div>
+                    <button class="modal-arrow right-arrow" data-right-arrow>&#9654;</button>
                 </div>
-                <div class="overlay" data-overlay></div>
             </div>
 
+            <div class="overlay" data-overlay></div>
             <section class="hobbies">
-
                 <h3 class="h3 hobbies-title">Hobbies</h3>
-
                 <ul class="hobbies-list has-scrollbar">
-
-                    <li class="hobbies-item" data-hobbies-link="https://www.photography-example.com">
-                        <div class="content-card" data-hobbies-item>
+                    <li class="hobbies-item" data-hobbies-item
+                        data-hobbies-images='["./assets/images/hobby-images/photography/seth-photography-hobby.jpg", "./assets/images/hobby-images/photography/marmot-photography-hobby.jpg", "./assets/images/hobby-images/photography/seth-photography-2.jpg"]'>
+                        <div class="content-card">
                             <figure class="hobbies-avatar-box">
-                                <img src="./assets/images/camera-outline.svg" alt="camera icon" width="60" data-hobbies-avatar>
+                                <img src="./assets/images/icons/camera-outline.svg" alt="camera icon" width="60"
+                                     data-hobbies-avatar>
                             </figure>
                             <h4 class="h4 hobbies-item-title" data-hobbies-title>Photography</h4>
                             <div class="hobbies-text" data-hobbies-text>
@@ -324,115 +279,43 @@
                             </div>
                         </div>
                     </li>
-
-                    <li class="hobbies-item" data-hobbies-link="https://www.table-tennis-example.com">
-                        <div class="content-card" data-hobbies-item>
+                    <li class="hobbies-item" data-hobbies-item
+                        data-hobbies-images='["assets/images/hobby-images/cars/964-hobby.jpg", "assets/images/hobby-images/cars/lightning-mcqueen-hobby.jpg", "assets/images/hobby-images/cars/dakar-hobby.jpg","assets/images/hobby-images/cars/992-hobby.jpg"]'>
+                        <div class="content-card">
                             <figure class="hobbies-avatar-box">
-                                <img src="./assets/images/table-tennis-outline.svg" alt="table tennis icon" width="60" data-hobbies-avatar>
-                            </figure>
-                            <h4 class="h4 hobbies-item-title" data-hobbies-title>Table Tennis</h4>
-                            <div class="hobbies-text" data-hobbies-text>
-                                <p>I used to play on the ISU Table Tennis team, but now I just love playing casually!</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="hobbies-item">
-                        <div class="content-card" data-hobbies-item>
-
-                            <figure class="hobbies-avatar-box">
-                                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60"
+                                <img src="./assets/images/icons/car-sport-outline.svg" alt="car sport icon" width="60"
                                      data-hobbies-avatar>
                             </figure>
-
-                            <h4 class="h4 hobbies-item-title" data-hobbies-title>Daniel lewis</h4>
-
+                            <h4 class="h4 hobbies-item-title" data-hobbies-title>Cars</h4>
                             <div class="hobbies-text" data-hobbies-text>
-                                <p>
-                                    Richard was hired to create a corporate identity. We were very pleased with the work
-                                    done. She has a
-                                    lot of experience
-                                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet,
-                                    ullamcous cididt
-                                    consectetur adipiscing
-                                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                                </p>
+                                <p>I love Formula 1, the movie <em>Cars</em>, and pretty much anything to do with
+                                    Porsche.</p>
                             </div>
-
                         </div>
                     </li>
-                    <li class="hobbies-item">
-                        <div class="content-card" data-hobbies-item>
-
+                    <li class="hobbies-item" data-hobbies-item
+                        data-hobbies-images='["assets/images/hobby-images/friends-and-family/taylor-mac.jpg", "assets/images/hobby-images/friends-and-family/zach-seth.jpg", "assets/images/hobby-images/friends-and-family/family.jpg"]'>
+                        <div class="content-card">
                             <figure class="hobbies-avatar-box">
-                                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60"
+                                <img src="./assets/images/icons/people-outline.svg" alt="car sport icon" width="60"
                                      data-hobbies-avatar>
                             </figure>
-
-                            <h4 class="h4 hobbies-item-title" data-hobbies-title>Daniel lewis</h4>
-
+                            <h4 class="h4 hobbies-item-title" data-hobbies-title>Friends and Family</h4>
                             <div class="hobbies-text" data-hobbies-text>
-                                <p>
-                                    Richard was hired to create a corporate identity. We were very pleased with the work
-                                    done. She has a
-                                    lot of experience
-                                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet,
-                                    ullamcous cididt
-                                    consectetur adipiscing
-                                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                                </p>
+                                <p>Any free time is spent hanging out with my wife, dog, and friends!</p>
                             </div>
-
                         </div>
                     </li>
-
                 </ul>
-
             </section>
 
-
-            <!--
-              - hobbies modal
-            -->
-
             <div class="modal-container" data-modal-container>
-
-                <div class="overlay" data-overlay></div>
-
-                <section class="hobbies-modal">
-
-                    <button class="modal-close-btn" data-modal-close-btn>
-                        <ion-icon name="close-outline"></ion-icon>
-                    </button>
-
-                    <div class="modal-img-wrapper">
-                        <figure class="modal-avatar-box">
-                            <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-                        </figure>
-                    </div>
-
-                    <div class="modal-content">
-
-                        <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-                        <time datetime="2021-06-14">14 June, 2021</time>
-
-                        <div data-modal-text>
-                            <p>
-                                Richard was hired to create a corporate identity. We were very pleased with the work
-                                done. She has a
-                                lot of experience
-                                and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous
-                                cididt
-                                consectetur adipiscing
-                                elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </section>
-
+                <div class="hobbies-modal">
+                    <button class="modal-close-btn" data-modal-close-btn>&times;</button>
+                    <div class="modal-carousel" data-modal-carousel></div>
+                </div>
             </div>
+            <div class="overlay" data-overlay></div>
 
         </article>
 
@@ -461,45 +344,21 @@
 
                     <li class="timeline-item">
 
-                        <h4 class="h4 timeline-item-title">University school of the arts</h4>
+                        <h4 class="h4 timeline-item-title">Iowa State University</h4>
 
-                        <span>2007 — 2008</span>
+                        <span>2021 — Present</span>
 
                         <p class="timeline-text">
-                            Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos
-                            dolores et
-                            quas molestias
-                            exceptur.
+                            Data Science Major
                         </p>
 
                     </li>
 
                     <li class="timeline-item">
 
-                        <h4 class="h4 timeline-item-title">New york academy of art</h4>
+                        <h4 class="h4 timeline-item-title">Norwalk High School</h4>
 
-                        <span>2006 — 2007</span>
-
-                        <p class="timeline-text">
-                            Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas
-                            assumenda est
-                            omnis..
-                        </p>
-
-                    </li>
-
-                    <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-                        <span>2002 — 2004</span>
-
-                        <p class="timeline-text">
-                            Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed
-                            consequuntur
-                            magni dolores
-                            eos.
-                        </p>
+                        <span>2017 — 2021</span>
 
                     </li>
 
@@ -521,47 +380,38 @@
 
                     <li class="timeline-item">
 
-                        <h4 class="h4 timeline-item-title">Creative director</h4>
+                        <h4 class="h4 timeline-item-title">PTS Cloud Software Engineer</h4>
+                        <p class="employer">John Deere</p>
+                        <span>2021 — Present</span>
 
-                        <span>2015 — Present</span>
 
-                        <p class="timeline-text">
-                            Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos
-                            dolores et qvuas
-                            molestias
-                            exceptur.
-                        </p>
-
-                    </li>
-
-                    <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">Art director</h4>
-
-                        <span>2013 — 2015</span>
-
-                        <p class="timeline-text">
-                            Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos
-                            dolores et
-                            quas molestias
-                            exceptur.
-                        </p>
+                        <ul class="timeline-text">
+                            <li>Working with a team to provide professional cloud solutions in Java, Python, and
+                                JavaScript
+                            </li>
+                            <li>Engaged in automation initiatives to streamline DNS migration, SSL certificate
+                                management, and AWS account creation processes, enhancing efficiency and accelerating
+                                deployment timelines resulting in the removal of over 110,000 security vulnerabilities
+                                and generating significant cost savings by optimizing AWS resources.
+                            </li>
+                            <li>Partnered with a Cloud Security team to enhance system security by implementing changes
+                                in the accounts creation pipeline, fostering streamlined processes and improved
+                                compliance measures.
+                            </li>
+                        </ul>
 
                     </li>
 
                     <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">Facilities Team Member</h4>
+                        <p class="employer">Valley Church</p>
+                        <span>2020 - 2022</span>
 
-                        <h4 class="h4 timeline-item-title">Web designer</h4>
-
-                        <span>2010 — 2013</span>
-
-                        <p class="timeline-text">
-                            Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos
-                            dolores et
-                            quas molestias
-                            exceptur.
-                        </p>
-
+                    </li>
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">Food and Beverage Expert</h4>
+                        <p class="employer">Target</p>
+                        <span>Summer of 2019</span>
                     </li>
 
                 </ol>
@@ -569,66 +419,83 @@
             </section>
 
             <section class="skill">
-
                 <h3 class="h3 skills-title">My skills</h3>
-
                 <ul class="skills-list content-card">
-
                     <li class="skills-item">
-
                         <div class="title-wrapper">
-                            <h5 class="h5">Web design</h5>
+                            <h5 class="h5">AWS</h5>
+                            <data value="65">65%</data>
+                        </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill"></div>
+                        </div>
+                    </li>
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Python</h5>
                             <data value="80">80%</data>
                         </div>
-
                         <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 80%;"></div>
+                            <div class="skill-progress-fill"></div>
                         </div>
-
                     </li>
-
                     <li class="skills-item">
-
                         <div class="title-wrapper">
-                            <h5 class="h5">Graphic design</h5>
-                            <data value="70">70%</data>
-                        </div>
-
-                        <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 70%;"></div>
-                        </div>
-
-                    </li>
-
-                    <li class="skills-item">
-
-                        <div class="title-wrapper">
-                            <h5 class="h5">Branding</h5>
-                            <data value="90">90%</data>
-                        </div>
-
-                        <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 90%;"></div>
-                        </div>
-
-                    </li>
-
-                    <li class="skills-item">
-
-                        <div class="title-wrapper">
-                            <h5 class="h5">WordPress</h5>
+                            <h5 class="h5">Java</h5>
                             <data value="50">50%</data>
                         </div>
-
                         <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 50%;"></div>
+                            <div class="skill-progress-fill"></div>
                         </div>
-
                     </li>
-
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Web Design</h5>
+                            <data value="25">25%</data>
+                        </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill"></div>
+                        </div>
+                    </li>
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Hadoop (MapReduce and HBase)</h5>
+                            <data value="60">60%</data>
+                        </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill"></div>
+                        </div>
+                    </li>
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Scripting and Query Languages (Pig, SQL, etc.)</h5>
+                            <data value="60">60%</data>
+                        </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill"></div>
+                        </div>
+                    </li>
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">R for Data Manipulation</h5>
+                            <data value="75">75%</data>
+                        </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill"></div>
+                        </div>
+                    </li>
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Table Tennis</h5>
+                            <data value="95">95%</data>
+                        </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill"></div>
+                        </div>
+                    </li>
                 </ul>
-
             </section>
+
 
         </article>
 
@@ -641,6 +508,8 @@
 
             <header>
                 <h2 class="h2 article-title">Portfolio</h2>
+                <p class="info-message">Some links are internal only</p>
+                <br>
             </header>
 
             <section class="projects">
@@ -652,15 +521,15 @@
                     </li>
 
                     <li class="filter-item">
-                        <button data-filter-btn>Web design</button>
+                        <button data-filter-btn>John Deere</button>
                     </li>
 
                     <li class="filter-item">
-                        <button data-filter-btn>Applications</button>
+                        <button data-filter-btn>Iowa State</button>
                     </li>
 
                     <li class="filter-item">
-                        <button data-filter-btn>Web development</button>
+                        <button data-filter-btn>Personal</button>
                     </li>
 
                 </ul>
@@ -684,15 +553,15 @@
                         </li>
 
                         <li class="select-item">
-                            <button data-select-item>Web design</button>
+                            <button data-select-item>John Deere</button>
                         </li>
 
                         <li class="select-item">
-                            <button data-select-item>Applications</button>
+                            <button data-select-item>Iowa State</button>
                         </li>
 
                         <li class="select-item">
-                            <button data-select-item>Web development</button>
+                            <button data-select-item>Personal</button>
                         </li>
 
                     </ul>
@@ -701,79 +570,84 @@
 
                 <ul class="project-list">
 
-                    <li class="project-item  active" data-filter-item data-category="web development">
-                        <a href="#">
+                    <li class="project-item  active" data-filter-item data-category="Personal">
+                        <a href="https://github.com/sethlors/photo-renamer" target="_blank">
 
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </div>
 
-                                <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                                <img src="./assets/images/portfolio-images/photo-renamer.png" alt="[photo renamer]"
+                                     loading="lazy">
                             </figure>
 
-                            <h3 class="project-title">Finance</h3>
+                            <h3 class="project-title">Photo Renamer</h3>
 
-                            <p class="project-category">Web development</p>
+                            <p class="project-category">Personal</p>
 
                         </a>
                     </li>
 
-                    <li class="project-item  active" data-filter-item data-category="web development">
-                        <a href="#">
+                    <li class="project-item  active" data-filter-item data-category="Personal">
+                        <a href="https://github.com/sethlors/formula1/tree/main" target="_blank">
 
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </div>
 
-                                <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                                <img src="./assets/images/portfolio-images/formula-1.png" alt="f1 icon" loading="lazy">
                             </figure>
 
-                            <h3 class="project-title">Orizon</h3>
+                            <h3 class="project-title">Formula 1 Race Predictions</h3>
 
-                            <p class="project-category">Web development</p>
+                            <p class="project-category">Personal</p>
 
                         </a>
                     </li>
 
-                    <li class="project-item  active" data-filter-item data-category="web design">
-                        <a href="#">
+                    <li class="project-item  active" data-filter-item data-category="Iowa State">
+                        <a href="https://drive.google.com/drive/folders/1g82jn-1THawqJs7ApsPDkgMOJkyLNzsE?usp=sharing"
+                           target="_blank">
 
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </div>
 
-                                <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                                <img src="./assets/images/portfolio-images/apache-flink.png" alt="apache flink"
+                                     loading="lazy">
                             </figure>
 
-                            <h3 class="project-title">Fundo</h3>
+                            <h3 class="project-title">Apache Flink</h3>
 
-                            <p class="project-category">Web design</p>
+                            <p class="project-category">Iowa State</p>
 
                         </a>
                     </li>
 
-                    <li class="project-item  active" data-filter-item data-category="applications">
-                        <a href="#">
+                    <li class="project-item  active" data-filter-item data-category="Iowa State">
+                        <a href="https://drive.google.com/drive/folders/1O-SNXYdDethrqVLI5kPKhW1Zw0dChAf9?usp=sharing"
+                           target="_blank">
 
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </div>
 
-                                <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                                <img src="./assets/images/portfolio-images/apache-spark.png" alt="apache spark"
+                                     loading="lazy">
                             </figure>
 
-                            <h3 class="project-title">Brawlhalla</h3>
+                            <h3 class="project-title">Apache Spark</h3>
 
-                            <p class="project-category">Applications</p>
+                            <p class="project-category">Iowa State</p>
 
                         </a>
                     </li>
 
-                    <li class="project-item  active" data-filter-item data-category="web design">
+                    <li class="project-item  active" data-filter-item data-category="John Deere">
                         <a href="#">
 
                             <figure class="project-img">
@@ -781,53 +655,57 @@
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </div>
 
-                                <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                                <img src="./assets/images/portfolio-images/john-deere-temp.png" alt="dsm."
+                                     loading="lazy">
                             </figure>
 
-                            <h3 class="project-title">DSM.</h3>
+                            <h3 class="project-title">Temp</h3>
 
-                            <p class="project-category">Web design</p>
+                            <p class="project-category">John Deere</p>
 
                         </a>
                     </li>
 
-                    <li class="project-item  active" data-filter-item data-category="web design">
-                        <a href="#">
+                    <li class="project-item  active" data-filter-item data-category="Personal">
+                        <a href="https://github.com/sethlors/personal-website" target="_blank">
 
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </div>
 
-                                <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                                <img src="./assets/images/portfolio-images/personal-website.png" alt="summary"
+                                     loading="lazy">
                             </figure>
 
-                            <h3 class="project-title">MetaSpark</h3>
+                            <h3 class="project-title">Personal Website</h3>
 
-                            <p class="project-category">Web design</p>
+                            <p class="project-category">Personal</p>
 
                         </a>
                     </li>
 
-                    <li class="project-item  active" data-filter-item data-category="web development">
-                        <a href="#">
+                    <li class="project-item  active" data-filter-item data-category="Iowa State">
+                        <a href="https://drive.google.com/drive/folders/1RMT64V4kyqjJpNsQUAKa1mZ-KODYNB49?usp=sharing"
+                           target="_blank">
 
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </div>
 
-                                <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                                <img src="./assets/images/portfolio-images/cyper-neo4j.png" alt="cypher neo4j"
+                                     loading="lazy">
                             </figure>
 
-                            <h3 class="project-title">Summary</h3>
+                            <h3 class="project-title">Cypher and Neo4j</h3>
 
-                            <p class="project-category">Web development</p>
+                            <p class="project-category">Iowa State</p>
 
                         </a>
                     </li>
 
-                    <li class="project-item  active" data-filter-item data-category="applications">
+                    <li class="project-item  active" data-filter-item data-category="John Deere">
                         <a href="#">
 
                             <figure class="project-img">
@@ -835,17 +713,94 @@
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </div>
 
-                                <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                                <img src="./assets/images/portfolio-images/john-deere-temp.png" alt="fundo"
+                                     loading="lazy">
                             </figure>
 
-                            <h3 class="project-title">Task Manager</h3>
+                            <h3 class="project-title">Temp</h3>
 
-                            <p class="project-category">Applications</p>
+                            <p class="project-category">John Deere</p>
 
                         </a>
                     </li>
 
-                    <li class="project-item  active" data-filter-item data-category="web development">
+                    <li class="project-item  active" data-filter-item data-category="Iowa State">
+                        <a href="https://drive.google.com/drive/folders/1hWlTCvSSzSjclGXBcKimMzMkrE2WtovR?usp=sharing"
+                           target="_blank">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/portfolio-images/java.png" alt="java" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Java</h3>
+
+                            <p class="project-category">Iowa State</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="Iowa State">
+                        <a href="https://drive.google.com/drive/folders/1KMvDWGJCCRly6ynoQngGOjoQVID6ydhF?usp=sharing"
+                           target="_blank">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/portfolio-images/hadoop.png" alt="hadoop" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Hadoop</h3>
+
+                            <p class="project-category">Iowa State</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="Iowa State">
+                        <a href="https://drive.google.com/drive/folders/1eJ_NJPlQyrt4a9_Ch79oxENWdK1Vh_WI?usp=sharing"
+                           target="_blank">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/portfolio-images/jupyter.png" alt="jupyter" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Jupyter</h3>
+
+                            <p class="project-category">Iowa State</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="Iowa State">
+                        <a href="https://drive.google.com/drive/folders/14D_kH-S8_aHiM6Fu9pWIkuP9S1LjsJnS?usp=sharing"
+                           target="_blank">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/portfolio-images/r-studio.png" alt="r studio" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">R Studios</h3>
+
+                            <p class="project-category">Iowa State</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="John Deere">
                         <a href="#">
 
                             <figure class="project-img">
@@ -853,12 +808,13 @@
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </div>
 
-                                <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                                <img src="./assets/images/portfolio-images/john-deere-temp.png" alt="metaspark"
+                                     loading="lazy">
                             </figure>
 
-                            <h3 class="project-title">Arrival</h3>
+                            <h3 class="project-title">Temp</h3>
 
-                            <p class="project-category">Web development</p>
+                            <p class="project-category">John Deere</p>
 
                         </a>
                     </li>
