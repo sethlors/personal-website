@@ -2,12 +2,6 @@
   #style.css
 \*-----------------------------------*/
 
-
-/**
- * copyright 2022 @codewithsadee
- */
-
-
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
@@ -273,8 +267,8 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar {
-    width: 5px; /* for vertical scrollbar */
-    height: 5px; /* for horizontal scrollbar */
+    width: 5px;
+    height: 5px;
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -636,10 +630,10 @@ main {
 
 .hobbies-item-title {
     margin-bottom: 10px;
-    text-align: center; /* Center text */
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: fit-content; /* Center horizontally */
+    width: fit-content;
 }
 
 .hobbies-text {
@@ -703,13 +697,13 @@ main {
 }
 
 .hobbies-modal {
-    background: transparent; /* Make modal background transparent */
+    background: transparent;
     position: relative;
-    padding: 0; /* Remove padding */
+    padding: 0;
     margin: 15px 12px;
-    border: none; /* Remove border */
-    border-radius: 0; /* Remove border-radius */
-    box-shadow: none; /* Remove shadow */
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
     transform: scale(1.2);
     opacity: 0;
     transition: var(--transition-1);
@@ -732,18 +726,18 @@ main {
     align-items: center;
     position: relative;
     width: 100%;
-    height: 80vh; /* Set a fixed height to maintain aspect ratio */
+    height: 80vh;
 }
 
 .modal-carousel img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Maintain aspect ratio */
-    display: none; /* Hide all images by default */
+    object-fit: contain;
+    display: none;
 }
 
 .modal-carousel img.active {
-    display: block; /* Show the active image */
+    display: block;
 }
 
 .modal-carousel img {
@@ -855,7 +849,7 @@ main {
 
 
 :root {
-    --jet: #333333; /* Define your colors here */
+    --jet: #333333;
     --light-gray: #d3d3d3;
 }
 
@@ -890,19 +884,19 @@ main {
     width: 100%;
     height: 8px;
     border-radius: 10px;
-    overflow: hidden; /* Ensure the progress bar does not overflow its container */
+    overflow: hidden;
 }
 
 .skill-progress-fill {
-    background: #fdd971; /* Or any other color you prefer */
-    width: 0; /* Start with 0 width */
-    height: 8px; /* Set a fixed height */
-    transition: width 2s ease-out, background-color 2s ease; /* Animate width change and background color */
+    background: #fdd971;
+    width: 0;
+    height: 8px;
+    transition: width 2s ease-out, background-color 2s ease;
 }
 
 .skill-progress-fill.animate {
-    width: 75%; /* Set the width to the desired percentage */
-    background: #fdd971; /* Ensure this color is visible */
+    width: 75%;
+    background: #fdd971;
 }
 
 
@@ -912,9 +906,9 @@ main {
 
 
 .info-message {
- margin-top: 8px; /* Adjust as needed */
- color: #fdd971; /* Adjust color as needed */
- font-size: 14px; /* Adjust font size as needed */
+    margin-top: 8px;
+    color: #fdd971;
+    font-size: 14px;
 }
 
 .filter-list {
@@ -1216,9 +1210,9 @@ main {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 1; /* Ensure it's above the normal avatar */
+        z-index: 1;
         opacity: 0;
-        pointer-events: none; /* Prevents hover issues */
+        pointer-events: none;
     }
 
     .avatar-box:hover .avatar-crazy {
@@ -1340,15 +1334,15 @@ main {
     }
 
     .hobbies-avatar-box {
-        transform: none; /* Reset transform */
-        border-radius: 0; /* Reset border-radius */
-        display: inline-block; /* Ensure the box fits the content */
-        background: none; /* Remove background if any */
+        transform: none;
+        border-radius: 0;
+        display: inline-block;
+        background: none;
     }
 
     .hobbies-avatar-box img {
-        width: 45px; /* Adjust size as needed */
-        display: block; /* Ensure image is displayed correctly */
+        width: 45px;
+        display: block;
     }
 
     .hobbies-text {
@@ -1357,12 +1351,15 @@ main {
     }
 
     .hobbies-item {
-        cursor: pointer; /* Change cursor to pointer to indicate clickability */
+        cursor: pointer;
     }
 
     .hobbies-item:hover .content-card {
-        transform: translateY(-5px); /* Slightly lift the item */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow to make it pop */
+        transform: translateY(-5px);
+        box-shadow: 0 0 0 2px transparent,
+        0 0 6px 2px rgba(253, 217, 113, 0.3), /* orange-yellow-crayola with increased transparency */ 0 0 12px 4px rgba(253, 217, 113, 0.3),
+        0 0 18px 6px rgba(253, 217, 113, 0.3);
+        transition: transform 0.3s, box-shadow 0.3s;
     }
 
     /* Hobbies modal */
@@ -1401,7 +1398,7 @@ main {
     }
 
     .modal-container {
-        display: none; /* Hide the modal by default */
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -1414,7 +1411,7 @@ main {
     }
 
     .modal-container.active {
-        display: flex; /* Show the modal when active */
+        display: flex;
     }
 
     .hobbies-modal {
@@ -1438,7 +1435,7 @@ main {
     }
 
     .overlay {
-        display: none; /* Hide the overlay by default */
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -1449,7 +1446,7 @@ main {
     }
 
     .overlay.active {
-        display: block; /* Show the overlay when active */
+        display: block;
     }
 
     .modal-close-btn {
@@ -1481,12 +1478,12 @@ main {
     }
 
     .timeline-text {
-        list-style-type: disc; /* Default bullet style */
-        padding-left: 20px; /* Indentation */
+        list-style-type: disc;
+        padding-left: 20px;
     }
 
     .timeline-text li {
-        margin-bottom: 10px; /* Space between bullet points */
+        margin-bottom: 10px;
     }
 
     .skills-item:not(:last-child) {
@@ -1494,7 +1491,7 @@ main {
     }
 
     .timeline-item {
-        margin-bottom: 20px; /* Space between timeline items */
+        margin-bottom: 20px;
     }
 
     .timeline-item-title {
