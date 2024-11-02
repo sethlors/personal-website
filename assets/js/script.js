@@ -86,6 +86,74 @@ if (modalCloseBtn && overlay) {
   console.error('Modal close button or overlay not found');
 }
 
+// custom select variables
+const select = document.querySelector("[data-select]");
+const selectItems = document.querySelectorAll("[data-select-item]");
+const selectValue = document.querySelector("[data-selecct-value]");
+const filterBtn = document.querySelectorAll("[data-filter-btn]");
+
+select.addEventListener("click", function () { elementToggleFunc(this); });
+
+// add event in all select items
+for (let i = 0; i < selectItems.length; i++) {
+  selectItems[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    elementToggleFunc(select);
+    filterFunc(selectedValue);
+
+  });
+}
+
+// filter variables
+const filterItems = document.querySelectorAll("[data-filter-item]");
+
+const filterFunc = function (selectedValue) {
+  for (let i = 0; i < filterItems.length; i++) {
+    const itemCategory = filterItems[i].dataset.category.toLowerCase(); // Convert to lowercase
+    if (selectedValue === "all") {
+      filterItems[i].classList.add("active");
+    } else if (selectedValue === itemCategory) {
+      filterItems[i].classList.add("active");
+    } else {
+      filterItems[i].classList.remove("active");
+    }
+  }
+}
+
+document.addEventListener('keydown', function(event) {
+  const modalContainer = document.querySelector('.modal-container.active');
+  if (modalContainer) {
+    if (event.key === 'ArrowLeft') {
+      const leftArrow = modalContainer.querySelector('[data-left-arrow]');
+      leftArrow.click();
+    } else if (event.key === 'ArrowRight') {
+      const rightArrow = modalContainer.querySelector('[data-right-arrow]');
+      rightArrow.click();
+    }
+  }
+});
+
+// add event in all filter button items for large screen
+let lastClickedBtn = filterBtn[0];
+
+for (let i = 0; i < filterBtn.length; i++) {
+
+  filterBtn[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    filterFunc(selectedValue);
+
+    lastClickedBtn.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtn = this;
+
+  });
+
+}
+
 // Navigation arrow click events
 if (leftArrow && rightArrow) {
   leftArrow.addEventListener("click", () => {
@@ -117,4 +185,85 @@ if (modalContainer) {
   });
 } else {
   console.error('Modal container not found');
+}
+
+// Skill progress bars animation on scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const skillsItems = document.querySelectorAll(".skills-item");
+
+  const animateOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    skillsItems.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      const skillProgressFill = item.querySelector(".skill-progress-fill");
+      const skillValue = item.querySelector("data").getAttribute("value");
+
+      if (rect.top <= windowHeight && rect.bottom >= 0) {
+        // Add animation class to start animation
+        skillProgressFill.classList.add("animate");
+        skillProgressFill.style.width = `${skillValue}%`; // Set the width based on the value attribute
+        console.log(`Animating: ${item.querySelector('.title-wrapper h5').innerText} with width ${skillValue}%`);
+      } else {
+        // Optionally, you can reset the width if needed
+        skillProgressFill.classList.remove("animate");
+        skillProgressFill.style.width = "0"; // Reset the width
+        console.log(`Resetting: ${item.querySelector('.title-wrapper h5').innerText}`);
+      }
+    });
+  };
+
+  // Call the function on scroll and on page load
+  window.addEventListener("scroll", animateOnScroll);
+  animateOnScroll();
+});
+
+
+
+
+// Navigation functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const navbarLinks = document.querySelectorAll("[data-nav-link]");
+  const pages = document.querySelectorAll("[data-page]");
+
+  navbarLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const targetPage = link.textContent.toLowerCase();
+
+      pages.forEach((page) => {
+        if (page.dataset.page === targetPage) {
+          page.classList.add("active");
+        } else {
+          page.classList.remove("active");
+        }
+      });
+
+      navbarLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      link.classList.add("active");
+    });
+  });
+});
+
+// page navigation variables
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
+// add event to all nav link
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
+
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[i].classList.remove("active");
+        navigationLinks[i].classList.remove("active");
+      }
+    }
+
+  });
 }
