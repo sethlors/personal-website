@@ -150,7 +150,7 @@ input, textarea {
 }
 
 html {
-    font-family: var(--ff-poppins);
+    font-family: var(--ff-poppins), pop, serif;
 }
 
 body {
